@@ -1,0 +1,205 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'Biobod.net — your home for BPlayzGamezYT, MixNest, and more.' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+</head>
+<body>
+  <slot />
+</body>
+</html>
+
+<style is:global>
+  :root {
+    --bg-primary:    #0a0a0f;
+    --bg-secondary:  #12121c;
+    --bg-card:       #1a1a2e;
+    --accent:        #7c3aed;
+    --accent2:       #06b6d4;
+    --accent-glow:   rgba(124,58,237,.35);
+    --text:          #f1f5f9;
+    --text-muted:    #94a3b8;
+    --border:        #2d2d4e;
+    --ease:          0.3s ease;
+  }
+  [data-theme="light"] {
+    --bg-primary:    #f8fafc;
+    --bg-secondary:  #f1f5f9;
+    --bg-card:       #ffffff;
+    --accent-glow:   rgba(124,58,237,.15);
+    --text:          #0f172a;
+    --text-muted:    #475569;
+    --border:        #e2e8f0;
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text);
+    transition: background var(--ease), color var(--ease);
+    overflow-x: hidden;
+  }
+
+  /* ── SHARED TOP BAR ── */
+  .topbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    transition: background var(--ease);
+    gap: 12px;
+  }
+  .topbar-left { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+
+  .tb-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: .83rem;
+    font-weight: 600;
+    padding: 6px 13px;
+    border-radius: 6px;
+    transition: opacity var(--ease), transform var(--ease);
+    white-space: nowrap;
+  }
+  .tb-link:hover { opacity:.82; transform:translateY(-1px); }
+  .tb-purple { background: var(--accent); }
+  .tb-red    { background: #dc2626; }
+  .tb-green  { background: #16a34a; }
+  .tb-orange { background: #ea580c; }
+  .tb-gray   { background: #4b5563; }
+
+  .theme-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 20px;
+    padding: 6px 13px;
+    font-size: .82rem;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all var(--ease);
+  }
+  .theme-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+
+  /* ── SHARED PAGE WRAPPER ── */
+  .page { margin-top: 60px; }
+
+  /* ── UNDER CONSTRUCTION PAGES ── */
+  .uc-hero {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 24px;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+  }
+  .uc-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 40%, rgba(124,58,237,.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .uc-icon { font-size: 4rem; margin-bottom: 24px; animation: bounce 2.5s ease-in-out infinite; }
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+  }
+  .uc-hero h1 {
+    font-size: clamp(2rem,5vw,3.5rem);
+    font-weight: 900;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .uc-hero p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 12px;
+  }
+  .uc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 28px;
+    background: rgba(124,58,237,.14);
+    border: 1px solid rgba(124,58,237,.4);
+    color: #a78bfa;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  .pulse-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #f59e0b;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(245,158,11,.5); }
+    50%      { box-shadow: 0 0 0 8px rgba(245,158,11,0); }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const saved = localStorage.getItem('biobod-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+  })();
+</script>
+
+<script>
+  function initTheme() {
+    const btn   = document.getElementById('themeBtn');
+    const icon  = document.getElementById('themeIcon');
+    const label = document.getElementById('themeLabel');
+    if (!btn) return;
+
+    function apply(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('biobod-theme', t);
+      icon.textContent  = t === 'dark' ? '☀️' : '🌙';
+      label.textContent = t === 'dark' ? 'Light Mode' : 'Dark Mode';
+    }
+
+    apply(localStorage.getItem('biobod-theme') || 'dark');
+    btn.addEventListener('click', () => {
+      apply(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initTheme);
+</script>

@@ -1,0 +1,220 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Biobod.net" description="Home of BPlayzGamezYT, MixNest, and more.">
+
+  <nav class="topbar">
+    <div class="topbar-left">
+      <a href="/bplayzgamezyt" class="tb-link tb-orange">BPlayzGamezYT</a>
+      <a href="/mixnest"       class="tb-link tb-green">MixNest</a>
+      <a href="https://subally.biobod.net" class="tb-link tb-red" target="_blank">
+        SubAlly <span class="badge">1</span>
+      </a>
+    </div>
+    <button class="theme-btn" id="themeBtn">
+      <span id="themeIcon">☀️</span>
+      <span id="themeLabel">Light Mode</span>
+    </button>
+  </nav>
+
+  <main class="page">
+    <section class="home-hero">
+      <div class="home-glow"></div>
+      <div class="home-badge">
+        <span class="pulse-dot" style="background:#22c55e;box-shadow:none"></span>
+        Live Network
+      </div>
+      <h1>Welcome to <span class="grad">Biobod.net</span></h1>
+      <p>The hub for everything we build — gaming content, music projects, tools, and whatever comes next.</p>
+      <div class="home-cards">
+        <a href="/bplayzgamezyt" class="home-card">
+          <div class="hc-icon">🎮</div>
+          <h3>BPlayzGamezYT</h3>
+          <p>Gaming videos, highlights, and commentary on YouTube.</p>
+          <span class="hc-arrow">→</span>
+        </a>
+        <a href="/mixnest" class="home-card">
+          <div class="hc-icon">🎵</div>
+          <h3>MixNest</h3>
+          <p>Music and audio projects under the Biobod umbrella.</p>
+          <span class="hc-arrow">→</span>
+        </a>
+        <a href="https://subally.biobod.net" class="home-card" target="_blank">
+          <div class="hc-icon">🤝</div>
+          <h3>SubAlly</h3>
+          <p>Our newest project — go check it out.</p>
+          <span class="hc-badge">New</span>
+          <span class="hc-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="news-bar">
+      <span class="news-label">NEWS</span>
+      <span>Our new project SubAlly has just released — <a href="https://subally.biobod.net" target="_blank">go check it out!</a></span>
+    </div>
+
+    <footer class="site-footer">
+      <p>© 2025 Biobod.net</p>
+    </footer>
+  </main>
+
+</BaseLayout>
+
+<style is:global>
+  .badge {
+    display: inline-block;
+    background: #22c55e;
+    color: #fff;
+    border-radius: 50%;
+    font-size: .65rem;
+    font-weight: 700;
+    width: 16px; height: 16px;
+    line-height: 16px;
+    text-align: center;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  .home-hero {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .home-glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 35%, rgba(124,58,237,.13) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(6,182,212,.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .home-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(34,197,94,.12);
+    border: 1px solid rgba(34,197,94,.35);
+    color: #4ade80;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    animation: fadeDown .6s ease both;
+  }
+  .home-hero h1 {
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: 900;
+    margin-bottom: 18px;
+    animation: fadeDown .7s ease .1s both;
+  }
+  .home-hero > p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 52px;
+    animation: fadeDown .7s ease .2s both;
+  }
+  .grad {
+    background: linear-gradient(135deg, #a78bfa, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .home-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    animation: fadeDown .7s ease .3s both;
+  }
+  .home-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-decoration: none;
+    color: var(--text);
+    text-align: left;
+    position: relative;
+    transition: transform var(--ease), border-color var(--ease), box-shadow var(--ease);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .home-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 14px 44px var(--accent-glow);
+  }
+  .hc-icon { font-size: 2rem; }
+  .home-card h3 { font-size: 1.1rem; font-weight: 700; }
+  .home-card p  { font-size: .88rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
+  .hc-arrow {
+    position: absolute;
+    right: 20px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    color: var(--accent2);
+    transition: transform var(--ease);
+  }
+  .home-card:hover .hc-arrow { transform: translateY(-50%) translateX(4px); }
+  .hc-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    width: fit-content;
+  }
+
+  .news-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 40px;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    font-size: .9rem;
+    color: var(--text-muted);
+  }
+  .news-label {
+    background: var(--accent);
+    color: #fff;
+    font-size: .7rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: .06em;
+    flex-shrink: 0;
+  }
+  .news-bar a { color: var(--accent2); text-decoration: none; font-weight: 600; }
+  .news-bar a:hover { text-decoration: underline; }
+
+  .site-footer {
+    text-align: center;
+    padding: 28px 24px;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+    font-size: .85rem;
+    color: var(--text-muted);
+  }
+
+  @keyframes fadeDown {
+    from { opacity:0; transform:translateY(-16px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+</style>

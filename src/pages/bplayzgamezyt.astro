@@ -1,0 +1,628 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="BPlayzGamezYT"
+  description="Gaming content creator on YouTube. 178+ videos, 29K+ views, started July 2021."
+>
+
+<!-- TOP NAV -->
+<nav class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <a href="/" class="tb-link tb-purple">Biobod.net</a>
+    <a href="https://youtube.com/@thereal_bplayzgamezyt" class="tb-link tb-red" target="_blank">▶ YouTube</a>
+  </div>
+  <button class="theme-btn" id="themeBtn">
+    <span id="themeIcon">☀️</span>
+    <span id="themeLabel">Light Mode</span>
+  </button>
+</nav>
+
+<!-- SIDE NAV -->
+<nav class="side-nav" id="sideNav">
+  <p class="nav-group-label">Navigation</p>
+  <a href="#hero"        class="snav-link active"><span class="nav-icon">🏠</span> Home</a>
+  <a href="#about"       class="snav-link"       ><span class="nav-icon">👤</span> About Me</a>
+  <a href="#stats"       class="snav-link"       ><span class="nav-icon">📊</span> Channel Stats</a>
+  <a href="#content"     class="snav-link"       ><span class="nav-icon">🎮</span> My Content</a>
+  <a href="#milestones"  class="snav-link"       ><span class="nav-icon">🏆</span> Milestones</a>
+  <a href="#connect"     class="snav-link"       ><span class="nav-icon">🔗</span> Connect</a>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<main class="bp-main">
+
+  <!-- HERO -->
+  <section id="hero" class="bp-section hero-sec">
+    <div class="hero-glow"></div>
+    <div class="particles" id="particles"></div>
+    <div class="hero-badge"><span class="live-dot"></span> Gaming Content Creator</div>
+    <h1 class="hero-title">Hey, I'm<br><span class="grad">BPlayzGamezYT</span></h1>
+    <p class="hero-sub">
+      I make gaming videos on YouTube — from raw gameplay sessions to highlight clips and everything in between.
+      I've been at it since 2021 and I'm not slowing down. Come hang out and let's game.
+    </p>
+    <div class="hero-btns">
+      <a href="https://youtube.com/@thereal_bplayzgamezyt" class="btn btn-fill" target="_blank">▶ Watch on YouTube</a>
+      <a href="#about" class="btn btn-outline">Learn More ↓</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bp-section alt-sec">
+    <p class="sec-label">Who I Am</p>
+    <h2 class="sec-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm <strong>BPlayzGamezYT</strong> — a gaming content creator on YouTube. I started the channel on <strong>July 9, 2021</strong> with one simple goal: make gaming content I actually enjoy creating, and hopefully that you enjoy watching too.</p>
+        <p>I cover a wide range of games, switching between whatever I'm into at the time. No forced hype, no fake energy — just honest gameplay with genuine commentary. If I think a game is mid, I'll say it. If it slaps, you'll know.</p>
+        <p>Every video I put out takes real time and effort. I'm not trying to be the biggest channel on the platform — I'm trying to build a real community of people who actually love gaming. Every subscriber, every view matters to me more than the numbers suggest.</p>
+        <p>I'm also part of the <strong>Biobod.net</strong> network, which means there's always more stuff in the works beyond just the YouTube channel. Stay tuned.</p>
+      </div>
+      <div class="reveal">
+        <div class="info-card">
+          <h4>Quick Facts</h4>
+          <ul class="fact-list">
+            <li><span class="k">Channel</span><span class="v">BPlayzGamezYT</span></li>
+            <li><span class="k">Started</span><span class="v">July 9, 2021</span></li>
+            <li><span class="k">Platform</span><span class="v">YouTube</span></li>
+            <li><span class="k">Content Type</span><span class="v">Gaming</span></li>
+            <li><span class="k">Network</span><span class="v">Biobod.net</span></li>
+            <li><span class="k">Status</span><span class="v">🟢 Active</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" class="bp-section">
+    <p class="sec-label">By the Numbers</p>
+    <h2 class="sec-title">Channel Stats</h2>
+    <p class="sec-desc">Here's where the channel stands. Every number represents real people taking time out of their day — and I don't take that for granted.</p>
+    <div class="stats-grid">
+      <div class="stat-card reveal"><div class="stat-num">182</div><div class="stat-lbl">Subscribers</div></div>
+      <div class="stat-card reveal"><div class="stat-num">178</div><div class="stat-lbl">Videos Uploaded</div></div>
+      <div class="stat-card reveal"><div class="stat-num">29K+</div><div class="stat-lbl">Total Views</div></div>
+      <div class="stat-card reveal"><div class="stat-num">4+</div><div class="stat-lbl">Years Creating</div></div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section id="content" class="bp-section alt-sec">
+    <p class="sec-label">What I Make</p>
+    <h2 class="sec-title">My Content</h2>
+    <p class="sec-desc">Here's a breakdown of the kind of stuff you'll find on the channel. No fluff — just gaming.</p>
+    <div class="cards-grid">
+      <div class="c-card reveal"><div class="c-icon">🎮</div><h3>Gameplay Videos</h3><p>Full sessions and playthroughs across whatever I'm feeling at the time. Raw, unfiltered, and actually watchable.</p></div>
+      <div class="c-card reveal"><div class="c-icon">🎯</div><h3>Highlights & Clips</h3><p>Best moments, clutch plays, and the stuff worth rewatching. Gaming is full of those — I make sure to capture them.</p></div>
+      <div class="c-card reveal"><div class="c-icon">🗣️</div><h3>Real Commentary</h3><p>I keep it genuine. You get my actual reactions and thoughts — no script, no fake personality, no manufactured hype.</p></div>
+      <div class="c-card reveal"><div class="c-icon">📅</div><h3>Consistent Uploads</h3><p>178+ videos since 2021 and still going. Consistency is something I take seriously — you can always expect more.</p></div>
+      <div class="c-card reveal"><div class="c-icon">🌐</div><h3>Part of Biobod.net</h3><p>The channel is part of the Biobod.net network — a collection of projects all working under one roof.</p></div>
+      <div class="c-card reveal"><div class="c-icon">💬</div><h3>Community First</h3><p>I'm not here for the algorithm. I'm here for the people who watch. The community is always the priority, full stop.</p></div>
+    </div>
+  </section>
+
+  <!-- MILESTONES -->
+  <section id="milestones" class="bp-section">
+    <p class="sec-label">The Journey</p>
+    <h2 class="sec-title">Milestones</h2>
+    <p class="sec-desc">A look at where it all started, the grind in between, and where things are heading.</p>
+    <div class="timeline">
+      <div class="t-item reveal">
+        <div class="t-date">July 9, 2021</div>
+        <div class="t-title">Channel Launch</div>
+        <div class="t-desc">Created the BPlayzGamezYT channel and dropped the first video. Had no idea where it was going — I just knew I wanted to make something.</div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-date">2021 – 2022</div>
+        <div class="t-title">Finding My Style</div>
+        <div class="t-desc">Early days of figuring out what I wanted to make. Tried different formats, different games, and started to find the approach that actually felt like me.</div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-date">2022 – 2023</div>
+        <div class="t-title">100+ Videos Milestone</div>
+        <div class="t-desc">Hit the 100 video mark — a bigger deal than it sounds. Proof to myself that I wasn't going to quit when things felt slow.</div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-date">2023 – 2024</div>
+        <div class="t-title">Joining Biobod.net</div>
+        <div class="t-desc">Became part of the Biobod.net network. Opened the door to new projects and collaboration opportunities beyond just the YouTube channel.</div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-date">2024 – Present</div>
+        <div class="t-title">178+ Videos & Still Going</div>
+        <div class="t-desc">29K+ views, a real community, and a library of content I'm actually proud of. Still uploading, still improving, still here.</div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-date">What's Next</div>
+        <div class="t-title">The Road Ahead</div>
+        <div class="t-desc">More content, better production, bigger goals. I'm not close to done — the best stuff is still ahead.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect" class="bp-section alt-sec">
+    <p class="sec-label">Get In Touch</p>
+    <h2 class="sec-title">Connect With Me</h2>
+    <p class="sec-desc">Want to collab, reach out, or just say what's up? Here's where to find me.</p>
+    <div class="connect-grid">
+      <a href="https://youtube.com/@thereal_bplayzgamezyt" class="con-card reveal" target="_blank">
+        <div class="con-icon">▶</div>
+        <div><h4>YouTube</h4><p>@thereal_bplayzgamezyt</p></div>
+      </a>
+      <a href="/" class="con-card reveal">
+        <div class="con-icon">🌐</div>
+        <div><h4>Biobod.net</h4><p>Main network hub</p></div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 BPlayzGamezYT · Part of <a href="/">Biobod.net</a></p>
+  </footer>
+
+</main>
+
+</BaseLayout>
+
+<style is:global>
+  /* ── SIDE NAV ── */
+  .side-nav {
+    position: fixed;
+    top: 60px; left: 0;
+    width: 220px;
+    height: calc(100vh - 60px);
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border);
+    padding: 20px 0;
+    overflow-y: auto;
+    z-index: 900;
+    transition: background var(--ease), transform .3s ease;
+  }
+  .nav-group-label {
+    padding: 0 20px 12px;
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 8px;
+  }
+  .snav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: .9rem;
+    border-left: 3px solid transparent;
+    transition: all var(--ease);
+  }
+  .snav-link:hover, .snav-link.active {
+    color: var(--accent2);
+    border-left-color: var(--accent2);
+    background: rgba(6,182,212,.07);
+  }
+  .nav-icon { width: 20px; text-align: center; }
+
+  .overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 800;
+  }
+  .overlay.show { display: block; }
+
+  .menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    width: 36px; height: 36px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: border-color var(--ease), color var(--ease);
+  }
+  .menu-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── MAIN ── */
+  .bp-main {
+    margin-left: 220px;
+    margin-top: 60px;
+  }
+  .bp-section {
+    padding: 90px 64px;
+    border-bottom: 1px solid var(--border);
+  }
+  .bp-section:last-of-type { border-bottom: none; }
+  .alt-sec { background: var(--bg-secondary); }
+
+  /* ── HERO ── */
+  .hero-sec {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-primary);
+  }
+  .hero-glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 65% 50%, rgba(124,58,237,.14) 0%, transparent 65%),
+      radial-gradient(ellipse at 10% 85%, rgba(6,182,212,.09) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  .particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: floatUp linear infinite;
+  }
+  @keyframes floatUp {
+    0%   { transform: translateY(110vh) scale(1); opacity: 0; }
+    10%  { opacity: .45; }
+    90%  { opacity: .45; }
+    100% { transform: translateY(-80px) scale(1.5); opacity: 0; }
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(124,58,237,.15);
+    border: 1px solid rgba(124,58,237,.4);
+    color: #a78bfa;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    width: fit-content;
+    animation: fadeDown .6s ease both;
+  }
+  .live-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: livePulse 2s infinite;
+  }
+  @keyframes livePulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); }
+    50%      { box-shadow: 0 0 0 8px rgba(34,197,94,0); }
+  }
+  .hero-title {
+    font-size: clamp(2.6rem, 6vw, 5.2rem);
+    font-weight: 900;
+    line-height: 1.08;
+    margin-bottom: 22px;
+    animation: fadeDown .7s ease .1s both;
+  }
+  .grad {
+    background: linear-gradient(135deg, #a78bfa, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    line-height: 1.75;
+    margin-bottom: 38px;
+    animation: fadeDown .7s ease .2s both;
+  }
+  .hero-btns {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    animation: fadeDown .7s ease .3s both;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 26px;
+    border-radius: 8px;
+    font-size: .95rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: transform var(--ease), box-shadow var(--ease);
+  }
+  .btn:hover { transform: translateY(-3px); }
+  .btn-fill {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 4px 22px rgba(124,58,237,.35);
+  }
+  .btn-fill:hover { box-shadow: 0 8px 32px rgba(124,58,237,.55); }
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-outline:hover { border-color: var(--accent2); color: var(--accent2); }
+
+  /* ── SECTION HEADERS ── */
+  .sec-label {
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--accent2);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .sec-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+  .sec-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 600px;
+    margin-bottom: 52px;
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+    align-items: start;
+  }
+  .about-text p {
+    color: var(--text-muted);
+    line-height: 1.85;
+    margin-bottom: 18px;
+    font-size: 1rem;
+  }
+  .about-text p strong { color: var(--text); }
+  .info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px;
+    transition: transform var(--ease), box-shadow var(--ease);
+  }
+  .info-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(0,0,0,.25); }
+  .info-card h4 {
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+  }
+  .fact-list { list-style: none; }
+  .fact-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .88rem;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .fact-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .fact-list .k { color: var(--text-muted); }
+  .fact-list .v { color: var(--text); font-weight: 600; }
+
+  /* ── STATS ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  .stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--ease), box-shadow var(--ease);
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  }
+  .stat-card:hover { transform: translateY(-7px); box-shadow: 0 18px 44px var(--accent-glow); }
+  .stat-num {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .stat-lbl {
+    font-size: .8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+  /* ── CONTENT CARDS ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+  }
+  .c-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 30px 26px;
+    transition: transform var(--ease), border-color var(--ease), box-shadow var(--ease);
+  }
+  .c-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 14px 44px var(--accent-glow);
+  }
+  .c-icon { font-size: 2rem; margin-bottom: 14px; }
+  .c-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+  .c-card p  { font-size: .88rem; color: var(--text-muted); line-height: 1.65; }
+
+  /* ── TIMELINE ── */
+  .timeline { padding-left: 28px; position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent), var(--accent2));
+  }
+  .t-item {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 42px;
+  }
+  .t-item::before {
+    content: '';
+    position: absolute;
+    left: -34px; top: 6px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg-primary);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .t-date  { font-size: .75rem; color: var(--accent2); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 5px; }
+  .t-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+  .t-desc  { font-size: .9rem; color: var(--text-muted); line-height: 1.65; }
+
+  /* ── CONNECT ── */
+  .connect-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+  .con-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all var(--ease);
+  }
+  .con-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 32px var(--accent-glow);
+  }
+  .con-icon {
+    font-size: 1.6rem;
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(124,58,237,.12);
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  .con-card h4 { font-size: .95rem; font-weight: 700; margin-bottom: 3px; }
+  .con-card p  { font-size: .78rem; color: var(--text-muted); }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    text-align: center;
+    padding: 36px 64px;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+    font-size: .85rem;
+    color: var(--text-muted);
+  }
+  .site-footer a { color: var(--accent); text-decoration: none; }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .65s ease, transform .65s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @keyframes fadeDown {
+    from { opacity:0; transform:translateY(-18px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .side-nav { transform: translateX(-100%); }
+    .side-nav.open { transform: translateX(0); }
+    .bp-main { margin-left: 0; }
+    .bp-section { padding: 60px 24px; }
+    .about-grid { grid-template-columns: 1fr; }
+    .menu-btn { display: flex !important; }
+  }
+</style>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const sideNav = document.getElementById('sideNav');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn?.addEventListener('click', () => {
+    sideNav?.classList.toggle('open');
+    overlay?.classList.toggle('show');
+  });
+  overlay?.addEventListener('click', () => {
+    sideNav?.classList.remove('open');
+    overlay?.classList.remove('show');
+  });
+
+  // Active nav on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.snav-link');
+
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= (s as HTMLElement).offsetTop - 110) cur = s.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  }, { passive: true });
+
+  navLinks.forEach(a => a.addEventListener('click', () => {
+    sideNav?.classList.remove('open');
+    overlay?.classList.remove('show');
+  }));
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Particles
+  const pc = document.getElementById('particles');
+  if (pc) {
+    for (let i = 0; i < 22; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = (Math.random() * 4 + 2) + 'px';
+      p.style.cssText = `left:${Math.random()*100}%;width:${size};height:${size};opacity:${Math.random()*.4+.1};animation-duration:${Math.random()*14+10}s;animation-delay:${Math.random()*12}s;`;
+      pc.appendChild(p);
+    }
+  }
+</script>

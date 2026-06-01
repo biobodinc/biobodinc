@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="MixNestFM — Biobod.net" description="MixNestFM: the FM radio arm of MixNest.">
+
+  <nav class="topbar">
+    <div class="topbar-left">
+      <a href="/mixnest"          class="tb-link tb-gray">MixNest</a>
+      <a href="/"                 class="tb-link tb-purple">Biobod.net</a>
+      <a href="/circuitcollision" class="tb-link tb-orange">Circuit Collision</a>
+    </div>
+    <button class="theme-btn" id="themeBtn">
+      <span id="themeIcon">☀️</span>
+      <span id="themeLabel">Light Mode</span>
+    </button>
+  </nav>
+
+  <main class="page">
+    <div class="uc-hero">
+      <div class="uc-icon">📻</div>
+      <h1>MixNestFM</h1>
+      <p>The FM side of MixNest — broadcasting is coming.</p>
+      <p>This page is currently under development. Come back soon to see the final result!</p>
+      <div class="uc-badge"><span class="pulse-dot"></span> Under Development</div>
+    </div>
+    <footer class="uc-footer">
+      <p>© 2025 MixNestFM · Part of <a href="/">Biobod.net</a></p>
+    </footer>
+  </main>
+
+</BaseLayout>

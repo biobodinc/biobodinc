@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="MixNest — Biobod.net" description="MixNest: music and audio projects under the Biobod umbrella.">
+
+  <nav class="topbar">
+    <div class="topbar-left">
+      <a href="/"                    class="tb-link tb-purple">Biobod.net</a>
+      <a href="/circuitcollision"    class="tb-link tb-orange">Circuit Collision</a>
+      <a href="/mixnestfm"           class="tb-link tb-green">MixNestFM</a>
+    </div>
+    <button class="theme-btn" id="themeBtn">
+      <span id="themeIcon">☀️</span>
+      <span id="themeLabel">Light Mode</span>
+    </button>
+  </nav>
+
+  <main class="page">
+    <div class="uc-hero">
+      <div class="uc-icon">🎵</div>
+      <h1>MixNest</h1>
+      <p>The home for music and audio projects under the Biobod umbrella.</p>
+      <p>This page is being built out — check back soon for the full experience.</p>
+      <div class="uc-badge"><span class="pulse-dot"></span> Under Development</div>
+    </div>
+    <footer class="uc-footer">
+      <p>© 2025 MixNest · Part of <a href="/">Biobod.net</a></p>
+    </footer>
+  </main>
+
+</BaseLayout>
+
+<style is:global>
+  .uc-footer {
+    text-align: center;
+    padding: 24px;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    font-size: .85rem;
+    color: var(--text-muted);
+  }
+  .uc-footer a { color: var(--accent); text-decoration: none; }
+</style>
