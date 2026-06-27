@@ -21,25 +21,27 @@ const { title, description = 'Biobod.net — your home for BPlayzGamezYT, MixNes
 
 <style is:global>
   :root {
-    --bg-primary:    #0a0a0f;
-    --bg-secondary:  #12121c;
-    --bg-card:       #1a1a2e;
-    --accent:        #7c3aed;
-    --accent2:       #06b6d4;
-    --accent-glow:   rgba(124,58,237,.35);
-    --text:          #f1f5f9;
-    --text-muted:    #94a3b8;
-    --border:        #2d2d4e;
+    --bg-primary:    #0d0d0d;
+    --bg-secondary:  #161616;
+    --bg-card:       #1c1c1c;
+    --accent:        #d99a3c;
+    --accent2:       #e8b765;
+    --accent-glow:   rgba(0,0,0,.5);
+    --text:          #ededed;
+    --text-muted:    #9a958c;
+    --border:        #2b2b2b;
     --ease:          0.3s ease;
   }
   [data-theme="light"] {
-    --bg-primary:    #f8fafc;
-    --bg-secondary:  #f1f5f9;
+    --bg-primary:    #f4f2ec;
+    --bg-secondary:  #eae7df;
     --bg-card:       #ffffff;
-    --accent-glow:   rgba(124,58,237,.15);
-    --text:          #0f172a;
-    --text-muted:    #475569;
-    --border:        #e2e8f0;
+    --accent:        #b07d1f;
+    --accent2:       #9c6e1a;
+    --accent-glow:   rgba(0,0,0,.12);
+    --text:          #1a1a1a;
+    --text-muted:    #5f5b53;
+    --border:        #ddd8cd;
   }
 
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -124,7 +126,7 @@ const { title, description = 'Biobod.net — your home for BPlayzGamezYT, MixNes
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 50% 40%, rgba(124,58,237,.1) 0%, transparent 65%);
+    background: none;
     pointer-events: none;
   }
   .uc-icon { font-size: 4rem; margin-bottom: 24px; animation: bounce 2.5s ease-in-out infinite; }
@@ -136,10 +138,7 @@ const { title, description = 'Biobod.net — your home for BPlayzGamezYT, MixNes
     font-size: clamp(2rem,5vw,3.5rem);
     font-weight: 900;
     margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--accent);
   }
   .uc-hero p {
     color: var(--text-muted);
@@ -153,9 +152,9 @@ const { title, description = 'Biobod.net — your home for BPlayzGamezYT, MixNes
     align-items: center;
     gap: 8px;
     margin-top: 28px;
-    background: rgba(124,58,237,.14);
-    border: 1px solid rgba(124,58,237,.4);
-    color: #a78bfa;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
     padding: 8px 18px;
     border-radius: 20px;
     font-size: .82rem;
